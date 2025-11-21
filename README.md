@@ -5,7 +5,7 @@ Enable a mobile manipulator to learn door-opening skills using the PPO algorithm
 > [!IMPORTANT]
 > Requires Python 3.10 or later.
 
-1. `cd mujoco_playground_termproject`
+1. `git clone https://github.com/YoungWook0533/mujoco_playground_termproject.git && cd mujoco_playground_termproject`
 2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/), a faster alternative to `pip`
 3. Create a virtual environment: `uv venv --python 3.11`
 4. Activate it: `source .venv/bin/activate`
