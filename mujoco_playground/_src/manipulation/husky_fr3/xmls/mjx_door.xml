@@ -1,0 +1,43 @@
+<mujoco model="panda cabinet">
+  <include file="mjx_scene.xml"/>
+
+  <worldbody>
+    <camera name="side" pos="0.500 1.381 0.476" xyaxes="-0.990 0.139 0.000 0.000 0.000 1.000"/>
+
+    <body name="handle" pos="1.43 -0.2 0.5">
+      <joint type="hinge" pos="0.12 -0.6 0.6" axis="0 0 1" range="0.0 2.0" damping="1" limited="true"/>
+       <!-- <joint type="hinge" pos="0.12 -0.6 0.6" axis="0 0 1" range="0.0 2.0" springdamper="10 10" limited="true"/> -->
+      <!-- <geom size="0.6 0.02 1.05" type="box" pos="0.07 -0.4 0.6" rgba="0 1 0 0.4" friction="1 .03 .003" quat="0.707388 0 0 -0.706825" group="1" name="panel" />
+      <geom size="0.015 0.075 0.02" type="box" pos="0 0 0" rgba="0 1 0 1" friction="1 .03 .003" group="1" name="handle" /> -->
+      <geom size="0.4 0.02 0.75" type="box" pos="0.07 -0.2 0.3" rgba="0 1 0 0.4" friction="1 .03 .003" quat="0.707388 0 0 -0.706825" group="1" name="panel" />
+      <geom size="0.015 0.075 0.02" type="box" pos="0 0 0" rgba="0 1 0 1" friction="1 .03 .003" group="1" name="handle" />
+    </body>
+
+    <!-- <body name="barrier" pos="1.0 0 0">
+      <geom type="plane" name="barrier" pos="0 0 0" size="0.0 0.0 0.01" zaxis="-1 0 0" condim="3"
+       friction="1 .03 .003" rgba="0 1 0 0.2" contype="2" conaffinity="1" solref="0.01 1" group="5"/>
+    </body> -->
+    <body mocap="true" name="mocap_target">
+      <geom type="sphere" size="0.025" rgba="1 0 0 1" contype="0" conaffinity="0"/>
+    </body>
+  </worldbody>
+
+  <keyframe>
+    <key name="home"
+      qpos="0 0 0.165
+            1 0 0 0
+            0 0
+            0 0
+            0 0.3 0 -1.57079 0 2.0 -0.7853 0.04 0.04 0.0"
+      ctrl="0 0 
+            0 0.3 0 -1.57079 0 2.0 -0.7853 0.04"/>
+    <key name="upright"
+      qpos="0 0 0.165
+            1 0 0 0
+            0 0
+            0 0
+            0 0 0 0 0 0 0 0 0 0.0"
+      ctrl="0 0 
+            0 0 0 0 0 0 0 0.0"/>
+  </keyframe>
+</mujoco>

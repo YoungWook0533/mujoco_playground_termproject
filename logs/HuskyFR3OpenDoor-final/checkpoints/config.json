@@ -1,0 +1,19 @@
+{
+    "action_repeat": 1,
+    "action_scale": 0.02,
+    "ctrl_dt": 0.02,
+    "episode_length": 300,
+    "mobile_action_scale": 0.4,
+    "reward_config": {
+        "scales": {
+            "door_open": 10.0,
+            "elbow_bend": 0.5,
+            "gripper_box": 5.0,
+            "manipulability": 0.5,
+            "no_barrier_collision": 0.25,
+            "no_self_collision": 0.1,
+            "robot_target_qpos": 0.1
+        }
+    },
+    "sim_dt": 0.005
+}
